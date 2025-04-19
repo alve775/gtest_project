@@ -63,16 +63,16 @@ class WindowsFactory : public GUIFactory {
         }
     };
 
-// //concrete linux factory    
-// class LinuxFactory : public GUIFactory {
-//     public:
-//         window* createWindow() override {
-//             return new linuxWindow();
-//         }
-//         scrollbar* createScrollbar() override {
-//             return new linuxScrollbar();
-//         }
-//     };
+//concrete linux factory    
+class LinuxFactory : public GUIFactory {
+    public:
+        window* createWindow() override {
+            return new linuxWindow();
+        }
+        scrollbar* createScrollbar() override {
+            return new linuxScrollbar();
+        }
+    };
 
 
 
@@ -96,21 +96,21 @@ TEST(GUIFactoryTest, WindowsFactoryTest) {
 }
 
 // //Linux
-// TEST(GUIFactoryTest, LinuxFactoryTest) {
-//     GUIFactory* factory = new LinuxFactory();
-//     window* win = factory->createWindow();
-//     scrollbar* bar = factory->createScrollbar();
+TEST(GUIFactoryTest, LinuxFactoryTest) {
+    GUIFactory* factory = new LinuxFactory();
+    window* win = factory->createWindow();
+    scrollbar* bar = factory->createScrollbar();
 
-//     EXPECT_NE(win, nullptr);
-//     EXPECT_NE(bar, nullptr);
+    EXPECT_NE(win, nullptr);
+    EXPECT_NE(bar, nullptr);
 
-//     win->render();
-//     bar->render();
+    // win->render();
+    // bar->render();
 
-//     delete win;
-//     delete bar;
-//     delete factory;
-// }
+    delete win;
+    delete bar;
+    delete factory;
+}
 
 
 int main(int argc, char **argv) {
