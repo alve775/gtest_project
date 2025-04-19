@@ -104,8 +104,8 @@ TEST(GUIFactoryTest, LinuxFactoryTest) {
     EXPECT_NE(win, nullptr);
     EXPECT_NE(bar, nullptr);
 
-    // win->render();
-    // bar->render();
+    win->render();
+    bar->render();
 
     delete win;
     delete bar;
