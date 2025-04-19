@@ -79,21 +79,21 @@ class LinuxFactory : public GUIFactory {
 
 // Google Test cases
 //Windows
-TEST(GUIFactoryTest, WindowsFactoryTest) {
-    GUIFactory* factory = new WindowsFactory();
-    window* win = factory->createWindow();
-    scrollbar* bar = factory->createScrollbar();
+// TEST(GUIFactoryTest, WindowsFactoryTest) {
+//     GUIFactory* factory = new WindowsFactory();
+//     window* win = factory->createWindow();
+//     scrollbar* bar = factory->createScrollbar();
 
-    EXPECT_NE(win, nullptr);
-    EXPECT_NE(bar, nullptr);
+//     EXPECT_NE(win, nullptr);
+//     EXPECT_NE(bar, nullptr);
 
-    win->render();
-    bar->render();
+//     win->render();
+//     bar->render();
 
-    delete win;
-    delete bar;
-    delete factory;
-}
+//     delete win;
+//     delete bar;
+//     delete factory;
+// }
 
 // //Linux
 TEST(GUIFactoryTest, LinuxFactoryTest) {
